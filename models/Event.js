@@ -5,20 +5,25 @@ const EventSchema = new Schema({
     type: Date,
     required: true,
   },
-  registered: {
-
+  name:{
+    type: String,
+    required: true
   },
-  park: {
+  participants: [{
     type: Schema.Types.ObjectId,
-    ref: 'parks'
-  },
+    ref: 'participants'
+  }],
   openTime: {
     type: Date,
     required: true,
   },
   closeTime: {
     type: Date,
-    default: Date.now
+    default: null
+  },
+  tag: {
+    type: String,
+    required: true
   }
 });
 mongoose.model('events', EventSchema);
