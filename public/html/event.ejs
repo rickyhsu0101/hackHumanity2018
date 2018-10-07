@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" rel="stylesheet">
+    <link href = "/css/event.css" rel = "stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone.min.js"></script>
+</head>
+<body>
+<div class="ui very padded container segment" id ="dataId" data-id="<%= id %>">
+    <div class="ui internally celled grid">
+        <div class="two column row">
+            <div class="ten wide column">
+            <img id="i1" class ="ui image" src="" alt="movement">
+            </div>
+            <div class="five wide column">
+                <h1 id="h1" class="ui center aligned header">
+                </h1>
+                <div class="ui compact segment">
+                    
+                        <h2 class="ui header">
+                            Time
+                        </h2>
+                        <p id = "t1">
+                            Massive amounts of sample text to extend the segment
+                        </p>
+                        
+                
+                
+                    <h2 class="ui header">
+                        Location
+                    </h2>
+                    <p>
+                         Phoenix, Arizona
+                    </p>   
+                    <h2 class="ui header">
+                        Registered Count
+                    </h2>
+                    <p id ="c1">
+                        0
+                    </p>     
+                </div>              
+            </div>
+        </div>
+        
+    
+            
+        <div class="two column row">
+            <div class="ten wide column">
+            <h3 class="ui header">
+                Description
+            </h3>
+              <div id="p1" class="ui left aligned container">
+              PRIDE Night is an amazing way to help out the LGBT community. While here, you can help set up and facilitate the event. Not only will it be rewarding to do this, you will also be able to interact and learn firsthand about the community.
+          
+              </div>
+            
+            </div>
+            <div class="five wide column">
+                <h3 class="ui header">
+                    Tags
+                </h3>
+                <p id = "tags">
+                    #sample tags
+                </p>
+            </div>
+        </div>
+</div>
+    
+<div class="ui centered two column grid">    
+        <div class="five wide column">
+            <div id="btn1" class="fluid ui button">
+            Sign up
+            </div>
+        </div>
+        <div class="five wide column">
+            <div class="fluid ui button">
+                <a href="https://www.google.com/">
+                Contact
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+        
+    <div id="myModal" class="modal">
+
+                                        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="cont" class="ui form">
+                <div id="il1" class="inline fields">
+                    <div class="eight wide field">
+                        <label>Name:</label>
+                        <input type="text" id ="firstName" placeholder="First Name">
+                    </div>
+                    <div class="seven wide field">
+                        <input type="text" id = "lastName" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="inline fields">
+                    <div class="fourteen wide field">
+                        <label>Email:</label>
+                        <input type="text" id = "email"placeholder="email@website.com">
+                            <div id="s1" class="fluid ui button">
+                                Submit
+                            </div>
+                    </div>
+                                                      
+                </div>
+            </div>
+        </div>
+                                      
+    </div>
+
+    
+</div>
+   
+<script src = "/js/Event.js">
+ 
+</script>         
+    
+</body>
+
+
+</html>

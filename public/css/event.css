@@ -1,0 +1,86 @@
+        #h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            position:relative;
+            padding-top: 30px;
+            font-size: 50px;
+            padding-bottom: 20px;
+            
+        }
+        #i1 {
+            font-family: Arial, Helvetica, sans-serif;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #777575;
+            max-width: 100%;
+            max-height: 500px;
+           
+            overflow: hidden;
+            
+            
+        }
+        .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+a {
+    color: inherit;
+}
+#i11 {
+    width: 1000px;
+    Height: 400px;
+    overflow: hidden;
+}
+#p1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1000px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+#cont {
+    width: 300px;
+}
+#il1 {
+    width:151%
+}
+#s1{
+width: 25%;
+}
+
+#s2{
+width: 30%;
+margin-left: 15px;
+}
