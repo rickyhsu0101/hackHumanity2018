@@ -125,6 +125,20 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
+    #movementsTitle {
+        /* background: -webkit-linear-gradient(90deg,rgb(0, 70, 223), rgb(56, 29, 153));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        color:#2185d0;
+        text-align: center;
+        margin-bottom: 0.5%;
+        font-size: 400%;
+        /* font-style: italic; */
+        font-weight: 600;
+        text-shadow: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     .flex-container-website{
         display: none;
     }
@@ -147,4 +161,6 @@ body{
         /* border: red 1px solid; */
         width: 40%;
     }
+
+    
 }
