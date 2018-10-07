@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <input type="file" id="avatar" name="avatar">
+  <input type="text" id = "eventName" placeholder="Event Name">
+<input type="text" id="tag" placeholder="Tags eg LGBTQ">
+<input type="text" id="desc" placeholder="Description">
+  <button id = "submitButton">asdfasdf</button>
+
+<script>
+  $("#submitButton").on("click", function () {
+    console.log("before ajax");
+    var data = new FormData();
+    data.append("avatar", $("#avatar")[0].files[0]);
+    console.log(data);
+
+    var d = new Date();
+data.append("startDate", d.getTime()+2592000000);
+    data.append("eventName", $("#eventName").val());
+data.append("openTime", d.getTime());
+    data.append("tag", $("#tag").val());
+    console.log(data);
+for (var pair of data.entries()) {
+console.log(pair[0]+ ', ' + pair[1]);
+}
+    $.ajax({
+      url: "/api/event/create",
+      method: "POST",
+      data: {
+        startDate: d.getTime(),
+        eventName: $("#eventName").val(),
+        openTime: d.getTime(),
+        tag: $("#tag").val(),
+        desc: $("#desc").val()
+      },
+    })
+    .done(function(response){
+      console.log(response);
+      var formData = new FormData;
+      formData.append("avatar", $("#avatar")[0].files[0]);
+      $.ajax({
+        url: "/api/event/upload/" + response.event._id,
+        method: "POST",
+        data: formData,
+        processData: false,
+        contentType: false
+      })
+      .done(function(response){
+        console.log(response);
+      })
+    })
+    console.log($("#avatar")[0].files[0]);
+    console.log("hello")
+  })
+</script>
+</body>
+</html>
