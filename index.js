@@ -25,9 +25,9 @@ mongoose
 //load models
 require('./models/index.js');
 const routes = require("./api/index");
-app.use(express.static(path.join(__dirname, "/html")));
+app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res)=>{
-  res.sendFile(path.join(__dirname, "/html/Welcome.html"));
+  res.sendFile(path.join(__dirname, "public/html/Homepage.html"));
 })
 app.use("/api/event", routes.events);
 app.listen(5000, ()=>{
