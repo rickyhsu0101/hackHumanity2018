@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
+    <style>
+        #h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            position:relative;
+            padding-top: 30px;
+            font-size: 50px;
+            padding-bottom: 20px;
+            
+        }
+        #i1 {
+            font-family: Arial, Helvetica, sans-serif;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+           border: 2px solid #777575;
+            max-width: 100%;
+            max-height: 200%;
+           
+            overflow: hidden;
+            
+            
+        }
+        .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+a {
+    color: inherit;
+}
+#i11 {
+    width: 1000px;
+    Height: 400px;
+    overflow: hidden;
+}
+#p1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1000px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+#cont {
+    width: 300px;
+}
+#il1 {
+    width:151%
+}
+#s1{
+width: 25%;
+}
+
+#s2{
+width: 30%;
+margin-left: 15px;
+}
+
+    </style>
+</head>
+<body>
+<div class="ui very padded container segment">
+    <div class="ui internally celled grid">
+        <div class="two column row">
+            <div class="ten wide column">
+            <img id="i1" class ="ui fluid image" src="images/alex-radelich-462768-unsplash.jpg" alt="movement">
+            </div>
+            <div class="five wide column">
+                <h1 id="h1" class="ui center aligned header">
+                </h1>
+                <div class="ui compact segment">
+                    
+                        <h2 class="ui header">
+                            Time
+                        </h2>
+                        <p>
+                            Massive amounts of sample text to extend the segment
+                        </p>
+                        
+                
+                
+                    <h2 class="ui header">
+                        Location
+                    </h2>
+                    <p>
+                        sample text
+                    </p>     
+                </div>              
+            </div>
+        </div>
+        
+    
+            
+        <div class="two column row">
+            <div class="ten wide column">
+            <h3 class="ui header">
+                Description
+            </h3>
+                <div id="p1" class="ui left aligned container">
+                PRIDE Night is an amazing way to help out the LGBT community. While here, you can help set up and facilitate the event. Not only will it be rewarding to do this, you will also be able to interact and learn firsthand about the community.
+            </div>
+        </div>
+        <div class="five wide column">
+            <h3 class="ui header">
+                Tags
+            </h3>
+            <p>
+                #sample tags
+            </p>
+        </div>
+    </div>
+</div>
+    
+<div class="ui centered two column grid">    
+        <div class="five wide column">
+            <div id="btn1" class="fluid ui button">
+            Sign up
+            </div>
+        </div>
+        <div class="five wide column">
+            <div class="fluid ui button">
+                <a href="https://www.google.com/">
+                Contact
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+        
+    <div id="myModal" class="modal">
+
+                                        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="cont" class="ui form">
+                <div id="il1" class="inline fields">
+                    <div class="eight wide field">
+                        <label>Name:</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="seven wide field">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div id="s1" class="fluid ui button">
+                                Submit
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="inline fields">
+                    <div class="fourteen wide field">
+                        <label>Email:</label>
+                        <input type="text" placeholder="email@website.com">
+                            <div id="s2" class="fluid ui button">
+                                Submit
+                            </div>
+                    </div>
+                                                      
+                </div>
+            </div>
+        </div>
+                                      
+    </div>
+
+    
+</div>
+            
+    
+</body>
+
+<script>
+    var title = "PRIDE Night";
+    document.getElementById("h1").innerHTML = title;
+
+    var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("btn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    //var image = "images/alex-radelich-462768-unsplash.jpg";
+    //document.getElementById("i1").innerhtml = image;
+</script>
+
+</html>
