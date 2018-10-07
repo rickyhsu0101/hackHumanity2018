@@ -34,6 +34,9 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res)=>{
   res.render("HomepageV2", {});
 })
+app.get("/add", (req, res)=>{
+  res.sendFile(path.join(__dirname, "/server/test.html"));
+})
 app.get("/event/:id", (req, res)=>{
   res.render("", {id: req.params.id})
 })
