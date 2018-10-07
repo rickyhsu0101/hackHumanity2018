@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  <!--import css style sheet-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+  <title>Welcome</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/Homepage.css">
+  <!--<link href = "/css/reset.css" rel = "stylesheet">-->
+  <link href = "/css/movement.css" rel="stylesheet">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+  <!-- Sidebar Menu -->
+  <div class="pusher">
+    <div class="ui vertical masthead center aligned segment landing-image">
+      <div id="filterImage">
+        <div id="homeImage">
+        </div>
+      </div>
+      <div class="ui container">
+        <div class="ui large secondary pointing icon menu">
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          <a class="active item">
+            <i class="home icon"></i>
+            Home
+          </a>
+          <a class="item">
+            <i class="bullhorn icon"></i>
+            Host
+          </a>
+          <div class="right menu">
+            <div class="item">
+              <div class="ui icon input">
+                <input type="text" placeholder="Search Event...">
+                <i class="search link icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui text container">
+        <h1 class="ui inverted header">
+          Find Your Movement
+        </h1>
+        <div class="ui container">
+          <br>
+          <br>
+          <div class="ui huge button" id="return">
+            <i class="left arrow icon"></i>
+            Returning user
+          </div>
+          <div class="ui huge primary button" id="new">
+            Get Started
+            <i class="right arrow icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ./movement %>
+    <div class="ui vertical stripe segment" id = "featuredStripe">
+      <!--Featured Section-->
+      <div class="ui grid">
+        <div class="row">
+          <div class="center aligned column">
+            <h1 id = "featured">Featured Events</h1>
+          </div>
+        </div>
+      </div>
+      <!-- To be rebuilt, instead of hard coded-->
+      <!-- Dependencies -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone.min.js"></script>
+      <script src="/js/Homepage.js"></script>
+      <!-- Cards -->
+      <div class="ui three column grid">
+        <div class="row ui cards">
+          <div class="column ">
+            <div class="ui centered card">
+              <div class="content">
+                <div class = "cardImage"></div>
+                <div class = "mainContent"> 
+                  <h4 class="header" id="titles" href="#"></h4>
+                  <div class="meta">
+                    <span class="date" id="dates"></span>
+                  </div>
+                  <div class="description">Desc to be grabbed later</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui centered card">
+              <div class="content">
+                <div class="cardImage"></div>
+                <div class = "mainContent">
+                  <h4 class="header" id="titles" href="#"></h4>
+                  <div class="meta">
+                    <span class="date" id="dates"></span>
+                  </div>
+                  <div class="description" ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui centered card">
+              <div class="content">
+                <div class="cardImage"></div>
+                <div class = "mainContent">
+                  <h4 class="header" id="titles" href="#"></h4>
+                  <div class="meta">
+                    <span class="date" id="dates"></span>
+                  </div>
+                  <div class="description" ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Recommended Section-->
+      <div class="ui grid">
+        <div class="row">
+          <div class="center aligned column">
+            <h1>Recommended Events</h1>
+          </div>
+        </div>
+      </div>
+      <div class="ui three column grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui centered card">
+              <div class="content">
+                <div class="cardImage"></div>
+                <div class = "mainContent">
+                  <h4 class="header" id="titles" href="#"></h4>
+                  <div class="meta">
+                    <span class="date" id="dates"></span>
+                  </div>
+                  <div class="description"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui centered card">
+              <div class="content">
+                <div class="cardImage"></div>
+                <div class = "mainContent">
+                 <h4 class="header" id="titles" href="#"></h4>
+                  <div class="meta">
+                    <span class="date" id="dates"></span>
+                  </div>
+                  <div class="description" ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui centered card">
+              <div class="content">
+                <div class="cardImage"></div>
+                <div class = "mainContent">
+                  <h4 class="header" id="titles" href="#"></h4>
+                  <div class="meta">
+                    <span class="date" id="dates"></span>
+                  </div>
+                  <div class="description" ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

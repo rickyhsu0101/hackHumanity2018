@@ -11,6 +11,9 @@ const path = require("path");
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+// specify the view engine and file locations
+app.set('views', path.join(__dirname, '/public/html'));
+app.set('view engine', 'ejs');
 //Configure the .env 
 dotenv.config();
 // DB config
@@ -29,7 +32,10 @@ app.use(express.static(path.join(__dirname, "/server")));
 const routes = require("./api/index");
 app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res)=>{
-  res.sendFile(path.join(__dirname, "public/html/Homepage.html"));
+  res.render("HomepageV2", {});
+})
+app.get("/event/:id", (req, res)=>{
+  res.render("", {id: req.params.id})
 })
 app.use("/api/event", routes.events);
 app.listen(5000, ()=>{

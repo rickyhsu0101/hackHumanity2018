@@ -25,7 +25,7 @@
     console.log(data);
 
     var d = new Date();
-data.append("startDate", d.getTime());
+data.append("startDate", d.getTime()+2592000000);
     data.append("eventName", $("#eventName").val());
 data.append("openTime", d.getTime());
     data.append("tag", $("#tag").val());
