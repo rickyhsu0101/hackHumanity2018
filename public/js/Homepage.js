@@ -49,19 +49,41 @@ $(document).on("click", "#return, .discover", function(){
 })
 
 $(document).on("click", ".discover", function(){
-  const selectedSize=$(".overlay.selected").size();
+  const selectedSize=$(".overlay.selected").length;
   if(selectedSize!=0){
-    var data = [];
-    $(".overlay.selected").forEach(function(e, i){
-      data.push(e.attr("data-tag"));
+    var dataTags = [];
+    $(".overlay.selected").each(function(i){
+      dataTags.push($(this).attr("data-tag"));
     });
+    console.log(dataTags);
     $.ajax({
-      url: "/event/filter",
-      data,
+      url: "/api/event/filter",
+      data: {
+        tags: dataTags
+      },
       method: "POST"
     })
     .done(response=>{
-      
+       response.events.forEach((e, i) => {
+         var date = moment(response.events[i].date).tz("America/Phoenix").format("dddd, MMMM Do YYYY, h:mm:ss a");
+         var title = response.events[i].name;
+         var thumbnail = response.events[i].image;
+         var desc = response.events[i].desc;
+         var id = e._id;
+         console.log(date);
+         $(".date").eq(i).html(date);
+         $(".header").eq(i + 1).html(title);
+         $(".cardImage").eq(i).css({
+           "background-image": "url(" + thumbnail + ")",
+           "background-size": "cover"
+         });
+         $(".cardImage").eq(i).attr("data_id", id);
+         //$(".cardImage").eq(i).attr("src", thumbnail);
+         $(".description").eq(i).html(desc.substring(0, 70) + ((desc.length <= 40) ? "" : "..."));
+         // $("#dates").html(date);
+         // $("#titles").html(title);
+       });
+
     })
   }
 

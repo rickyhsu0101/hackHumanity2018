@@ -82,11 +82,18 @@ router.get("/all", (req, res)=>{
 // @desc    Get events pertaining to certain filter
 // @access  Public
 router.post("/filter", (req, res)=>{
-  const filter = req.body.tags.map(tag=>{
-    return ({
-      tag
-    })
-  });
+  console.log(req.body);
+  console.log(req.body.tags)
+  var filter;
+  if (typeof req.body["tags[]"]=="string"){
+    filter = [{tag: req.body["tags[]"]}];
+  }else{
+    filter = req.body['tags[]'].map(tag=>{
+      return ({
+        tag
+      })
+    });
+  }
   Events.find({$or: filter})
     .then(events=>{
       res.json({
