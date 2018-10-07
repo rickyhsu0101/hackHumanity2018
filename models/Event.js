@@ -9,6 +9,14 @@ const EventSchema = new Schema({
     type: String,
     required: true
   },
+  image:{
+    type: String,
+    default: null
+  },
+  desc:{
+    type: String,
+    defualt: "No Descriptions"
+  },
   participants: [{
     type: Schema.Types.ObjectId,
     ref: 'participants'

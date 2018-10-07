@@ -7,6 +7,7 @@ const passport = require('passport');
 const schedule = require('node-schedule');
 const moment = require('moment');
 const momenttz = require('moment-timezone');
+const path = require("path");
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -23,6 +24,8 @@ mongoose
   .catch(err => console.log(err, 'there is an error'));
 //load models
 require('./models/index.js');
+app.use(express.static(path.join(__dirname, "/server")));
+
 const routes = require("./api/index");
 app.use("/api/event", routes.events);
 app.listen(5000, ()=>{
