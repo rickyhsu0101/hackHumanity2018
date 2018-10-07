@@ -28,15 +28,13 @@
  #featured{
   color: "#2185d0";
   font-family:"Arial, Helvetica, sans-serif";
-  margin-top: "5px";
   margin-bottom: "5px";
  }
 
  #recommended{
-  color: "#2185d0"
-  font-family:"Arial, Helvetica, sans-serif";
-  margin-top: "5px";
-  margin-bottom :"5px";
+  color: "#2185d0";
+  font-family: "Arial, Helvetica, sans-serif";
+  margin-bottom: "5px";
  }
 
  /* Card ids to be added*/
