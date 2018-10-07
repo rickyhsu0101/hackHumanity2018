@@ -25,6 +25,20 @@
    z-index: -2;
  }
 
+ #featured{
+  color: "#2185d0";
+  font-family:"Arial, Helvetica, sans-serif";
+  margin-top: "5px";
+  margin-bottom: "5px";
+ }
+
+ #recommended{
+  color: "#2185d0"
+  font-family:"Arial, Helvetica, sans-serif";
+  margin-top: "5px";
+  margin-bottom :"5px";
+ }
+
  /* Card ids to be added*/
 
  .masthead.segment {
