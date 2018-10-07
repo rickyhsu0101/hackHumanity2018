@@ -1,0 +1,30 @@
+body {
+    
+    background-color: #00eeff86;
+    
+}
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+div#welcome{
+    height: 100vh;
+    display: block;
+    position: relative;
+    
+}
+div::after {
+    content: "";
+    background: url(./stockimgcrowd.png);
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+h1{
+    -webkit-text-fill-color: white;
+    font-size: 10em;
+}
