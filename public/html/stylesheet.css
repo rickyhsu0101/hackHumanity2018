@@ -24,6 +24,10 @@ div::after {
     position: absolute;
     z-index: -1;   
 }
+div#background {
+    background: "http://www.projects.socialsciences.manchester.ac.uk/global-social-challenges/wp-content/uploads/2017/06/Occ-1080x675.jpg";
+    opcaity: 0.4;
+}
 h1{
     -webkit-text-fill-color: white;
     font-size: 10em;
