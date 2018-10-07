@@ -2,6 +2,9 @@ moment.tz.add("America/Phoenix|MST MDT MWT|70 60 60|01010202010|-261r0 1nX0 11B0
 $(document).ready(function () {
   $("html, body").scrollTop(0);
   var load = false;
+  $("#home").on("click", function(){
+    $("html, body").animate({scrollTop: 0}, 1000);
+  });
   $(document).on("scroll", function(){
   //console.log($("#featured").offset().top, $(document).scrollTop());
     if(!load && $(document).scrollTop()+$(window).height()>=$("#featured").offset().top){

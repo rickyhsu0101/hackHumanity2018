@@ -18,9 +18,7 @@
   <!--<link href = "/css/reset.css" rel = "stylesheet">-->
   <link href = "/css/movement.css" rel="stylesheet">
   <script>
-    $(document)
-      .ready(function() {
-  
+    $(document).ready(function() {
         // fix menu when passed
         $('.masthead')
           .visibility({
@@ -31,16 +29,8 @@
             onBottomPassedReverse: function() {
               $('.fixed.menu').transition('fade out');
             }
-          })
-        ;
-  
-        // create sidebar and attach to menu open
-        $('.ui.sidebar')
-          .sidebar('attach events', '.toc.item')
-        ;
-  
-      })
-    ;
+          });
+      });
     </script>
 </head>
 
@@ -49,7 +39,7 @@
   <div class="ui large top fixed hidden menu">
     <div class="ui container">
       <div class="ui large secondary pointing icon menu">
-        <a class="active item">
+        <a class="active item" id ="home">
           <i class="home icon"></i>
           Home
         </a>
