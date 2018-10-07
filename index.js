@@ -35,7 +35,7 @@ app.get("/", (req, res)=>{
   res.render("HomepageV2", {});
 })
 app.get("/event/:id", (req, res)=>{
-  res.render("", {id: req.params.id})
+  res.render("event", {id: req.params.id})
 })
 app.use("/api/event", routes.events);
 app.listen(5000, ()=>{

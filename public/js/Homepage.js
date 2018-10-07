@@ -38,6 +38,7 @@ $(document).ready(function () {
   })
   
 });
+
 $(document).on("click", "#new", function(){
   
   $("html, body").animate({ scrollTop: $("#movementsTitle").offset().top }, 1000);
@@ -46,6 +47,28 @@ $(document).on("click", "#new", function(){
 $(document).on("click", "#return, .discover", function(){
   $("html, body").animate({ scrollTop: $("#featured").offset().top -100}, 1000);
 })
+
+$(document).on("click", ".discover", function(){
+  const selectedSize=$(".overlay.selected").size();
+  if(selectedSize!=0){
+    var data = [];
+    $(".overlay.selected").forEach(function(e, i){
+      data.push(e.attr("data-tag"));
+    });
+    $.ajax({
+      url: "/event/filter",
+      data,
+      method: "POST"
+    })
+    .done(response=>{
+      
+    })
+  }
+
+  
+  $("html, body").animate({ scrollTop: $("#featured").offset().top -100}, 1000);
+})
+
 $(document).on("click", ".cardImage", function(){
   window.location.href = "/event/" + $(this).attr("data_id");
 });
