@@ -24,6 +24,8 @@ mongoose
   .catch(err => console.log(err, 'there is an error'));
 //load models
 require('./models/index.js');
+app.use(express.static(path.join(__dirname, "/server")));
+
 const routes = require("./api/index");
 app.use(express.static(path.join(__dirname, "/public")));
 app.get("/", (req, res)=>{
