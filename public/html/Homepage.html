@@ -97,51 +97,11 @@
         display: none;
     }
 
-    @media only screen and (max-width: 700px) {
-        .ui.fixed.menu {
-            display: none !important;
-        }
-        .secondary.pointing.menu .item,
-        .secondary.pointing.menu .menu {
-            display: none;
-        }
-        .secondary.pointing.menu .toc.item {
-            display: block;
-        }
-        .masthead.segment {
-            min-height: 350px;
-        }
-        .masthead h1.ui.header {
-            font-size: 2em;
-            margin-top: 1.5em;
-        }
-        .masthead h2 {
-            margin-top: 0.5em;
-            font-size: 1.5em;
-        }
-    }
   </style>
 </head>
 
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-    <!-- Following Menu -->
-    <div class="ui large top fixed hidden menu">
-        <div class="ui container">
-            <a class="active item">Home</a>
-            <a class="item">Work</a>
-            <a class="item">Company</a>
-            <a class="item">Careers</a>
-            <div class="right menu">
-                <div class="item">
-                    <a class="ui button">Log in</a>
-                </div>
-                <div class="item">
-                    <a class="ui primary button">Sign Up</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Sidebar Menu -->
     <div class="pusher">
         <div class="ui vertical masthead center aligned segment landing-image">
@@ -191,6 +151,7 @@
             </div>
         </div>
         <div class="ui vertical stripe segment">
+            <!--Featured Section-->
             <div class="ui grid">
                 <div class ="row">
                     <div class="center aligned column">
@@ -207,7 +168,7 @@
             <div class="ui three column grid">
                 <div class= "row">     
                     <div class= "column">  
-                        <div class="ui card">
+                        <div class="ui centered card">
                             <a class="image" href="https://disney.com">
                                 <img src="https://media.npr.org/assets/img/2015/06/28/ap_240969580256-f689118e32319d5fbff3c41f92f68b82181dbca2-s800-c85.jpg">
                             </a>
@@ -221,7 +182,7 @@
                         </div>
                     </div>
                     <div class= "column">  
-                        <div class="ui card">
+                        <div class="ui centered card">
                             <a class="image" href="https://disney.com">
                                 <!-- images to be grabbed from server later -->
                                 <img src="https://media.npr.org/assets/img/2015/06/28/ap_240969580256-f689118e32319d5fbff3c41f92f68b82181dbca2-s800-c85.jpg">
@@ -236,7 +197,7 @@
                         </div>
                     </div>
                     <div class= "column">  
-                        <div class="ui card">
+                        <div class="ui centered card">
                             <a class="image" href="https://disney.com">
                                 <img src="https://media.npr.org/assets/img/2015/06/28/ap_240969580256-f689118e32319d5fbff3c41f92f68b82181dbca2-s800-c85.jpg">
                             </a>
@@ -246,6 +207,62 @@
                                     <span class="date" id="dates"></span>
                                 </div>
                                 <div class= "description" href="https://disney.com">Desc to be grabbed later</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Recommended Section-->
+            <div class="ui grid">
+                    <div class ="row">
+                            <div class="center aligned column">
+                                <h1>Recommended Events</h1>
+                            </div>
+                    </div>
+            </div>
+            <div class="ui three column grid">
+                    <div class= "row">     
+                        <div class= "column">  
+                            <div class="ui centered card">
+                                <a class="image" href="https://disney.com">
+                                    <img src="https://media.npr.org/assets/img/2015/06/28/ap_240969580256-f689118e32319d5fbff3c41f92f68b82181dbca2-s800-c85.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="header" id="titles" href="https://disney.com"></a>
+                                    <div class="meta">
+                                        <span class="date" id="dates"></span>
+                                    </div>
+                                    <div class= "description" href="https://disney.com">Desc to be grabbed later</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class= "column">  
+                            <div class="ui centered card">
+                                <a class="image" href="https://disney.com">
+                                    <!-- images to be grabbed from server later -->
+                                    <img src="https://media.npr.org/assets/img/2015/06/28/ap_240969580256-f689118e32319d5fbff3c41f92f68b82181dbca2-s800-c85.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="header" id="titles" href="https://disney.com"></a>
+                                    <div class="meta">
+                                        <span class="date" id="dates">October 28, 2018</span>
+                                    </div>
+                                    <div class= "description" href="https://disney.com">Desc to be grabbed later</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class= "column">  
+                            <div class="ui centered card">
+                                <a class="image" href="https://disney.com">
+                                    <img src="https://media.npr.org/assets/img/2015/06/28/ap_240969580256-f689118e32319d5fbff3c41f92f68b82181dbca2-s800-c85.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="header" id="titles"href="https://disney.com"></a>
+                                    <div class="meta">
+                                        <span class="date" id="dates"></span>
+                                    </div>
+                                    <div class= "description" href="https://disney.com">Desc to be grabbed later</div>
+                                </div>
                             </div>
                         </div>
                     </div>
