@@ -10,9 +10,14 @@ $(document).ready(function(){
         response.events.forEach((e, i) => { 
             var date = moment(response.events[i].date).tz("America/Phoenix").format("dddd, MMMM Do YYYY, h:mm:ss a");
             var title = response.events[i].name;
+            var thumbnail = response.events[i].image;
+            var desc = response.events[i].desc;
             console.log(date);
             $(".date").eq(i).html(date);
-            $(".header").eq(i).html(title);
+            $(".header").eq(i+1).html(title);
+            $(".cardImage").eq(i).css({"background-image": "url("+thumbnail+")", "background-size": "cover"});
+            $(".cardImage").eq(i).attr("src", thumbnail);
+            $(".description").eq(i).html(desc.substring(0, 70)+ ((desc.length <=40)? "": "..."));
             // $("#dates").html(date);
             // $("#titles").html(title);
         }); 
