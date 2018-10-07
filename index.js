@@ -38,7 +38,7 @@ app.get("/add", (req, res)=>{
   res.sendFile(path.join(__dirname, "/server/test.html"));
 })
 app.get("/event/:id", (req, res)=>{
-  res.render("", {id: req.params.id})
+  res.render("event", {id: req.params.id})
 })
 app.use("/api/event", routes.events);
 app.listen(5000, ()=>{
