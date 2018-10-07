@@ -9,17 +9,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
     <style>
         #h1 {
+            font-family: Arial, Helvetica, sans-serif;
             position:relative;
-            top: 20px;
+            padding-top: 30px;
             font-size: 60px;
-            margin-bottom: 30px;
+            padding-bottom: 20px;
+            color: #2185d0;
+            
         }
         #i1 {
+            font-family: Arial, Helvetica, sans-serif;
             display:block;
             margin-left: auto;
             margin-right: auto;
-            width: 100%;
-            height: 200%;
+           
+            max-width: 100%;
+            max-height: 200%;
+           
             overflow: hidden;
             
             
@@ -59,6 +65,7 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+    
 }
 a {
     color: inherit;
@@ -68,67 +75,147 @@ a {
     Height: 400px;
     overflow: hidden;
 }
+#p1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1000px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+#cont {
+    width: 300px;
+}
+#il1 {
+    width:151%
+}
+#s1{
+width: 25%;
+}
+
+#s2{
+width: 30%;
+margin-left: 15px;
+}
 
     </style>
 </head>
 <body>
-        
-        <h1 id="h1" class="ui center aligned header">
-                
-              </h1>
-            <div id="i11" class="ui container center">
+<div class="ui internally celled grid">
+    <div class="two column row">
+        <div class="ten wide column">
             <img id="i1" class ="ui fluid image" src="images/alex-radelich-462768-unsplash.jpg" alt="movement">
+        </div>
+        <div class="five wide column">
+                <h1 id="h1" class="ui center aligned header">
+                </h1>
+                
+            <div class="ui vertical extra padded segment">
+                                    
             </div>
-            <div class="ui two column centered grid">
-                    <div class="column">
-                        <div class="ui segment">
-                                PRIDE Night is an amazing way to help out the LGBT community. While here, you can help set up and facilitate the event. Not only will it be rewarding to do this, 
-                                you will also be able to interact and learn firsthand about the community.
-                        </div>
-                    </div>
-                    <div class="four column centered row">
-                      <div class="column">
-                            <div id="btn1" class="fluid ui button">
-                                    Sign up
-                                </div>
-                                <div id="myModal" class="modal">
+            <div class="ui vertical segment">
+                        <h2 class="ui header">
+                            Time
+                        </h2>
+                        <p>
+                            sample text
+                        </p>
+            </div>
+            <div class="ui vertical segment">
+                    <h2 class="ui header">
+                        Location
+                    </h2>
+                    <p>
+                        sample text
+                    </p>
+                                
+            </div>
+            <div class="ui vertical segment">
+                    <h2 class="ui header">
+                        Expected attendance
+                    </h2>
+                    <p>
+                        sample text
+                    </p>
+                                
+            </div>
+            <div class="ui vertical extra padded segment">
+                                    
+            </div>
+        </div>
+    </div>
+            
+    <div class="two column row">
+        <div class="ten wide column">
+            <h3 class="ui header">
+                Description
+            </h3>
+            <div id="p1" class="ui left aligned container">
+                PRIDE Night is an amazing way to help out the LGBT community. While here, you can help set up and facilitate the event. Not only will it be rewarding to do this, you will also be able to interact and learn firsthand about the community.
+            </div>
+        </div>
+        <div class="five wide column">
+            <h3 class="ui header">
+                Tags
+            </h3>
+            <p>
+                #sample tags
+            </p>
+        </div>
+    </div>
+</div>
+    
+<div class="ui centered two column grid">    
+        <div class="five wide column">
+            <div id="btn1" class="fluid ui button">
+            Sign up
+            </div>
+        </div>
+        <div class="five wide column">
+            <div class="fluid ui button">
+                <a href="https://www.google.com/">
+                Contact
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    <div id="myModal" class="modal">
 
                                         <!-- Modal content -->
-                                        <div class="modal-content">
-                                          <span class="close">&times;</span>
-                                          <div class="ui form">
-                                                <div class="inline fields">
-                                                  <div class="eight wide field">
-                                                    <label>Name:</label>
-                                                    <input type="text" placeholder="First Name">
-                                                  </div>
-                                                  <div class="seven wide field">
-                                                    <input type="text" placeholder="Last Name">
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="ui form">
-                                                    <div class="inline fields">
-                                                      <div class="fourteen wide field">
-                                                        <label>Email:</label>
-                                                        <input type="text" placeholder="email@website.com">
-                                                      </div>
-                                                      
-                                                    </div>
-                                                  </div>
-                                        </div>
-                                      
-                                      </div>
-                      </div>
-                      <div class="column">
-                            <div id="btn2" class="fluid ui button">
-                                <a href="https://www.google.com/">
-                                    Contact
-                            </a>
-                                </div>
-                      </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="cont" class="ui form">
+                <div id="il1" class="inline fields">
+                    <div class="eight wide field">
+                        <label>Name:</label>
+                        <input type="text" placeholder="First Name">
                     </div>
-                  </div>
+                    <div class="seven wide field">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div id="s1" class="fluid ui button">
+                                Submit
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="inline fields">
+                    <div class="fourteen wide field">
+                        <label>Email:</label>
+                        <input type="text" placeholder="email@website.com">
+                            <div id="s2" class="fluid ui button">
+                                Submit
+                            </div>
+                    </div>
+                                                      
+                </div>
+            </div>
+        </div>
+                                      
+    </div>
+
+    
+</div>
             
     
 </body>
@@ -136,6 +223,7 @@ a {
 <script>
     var title = "PRIDE Night";
     document.getElementById("h1").innerHTML = title;
+
     var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
