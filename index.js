@@ -40,6 +40,9 @@ app.get("/add", (req, res)=>{
 app.get("/event/:id", (req, res)=>{
   res.render("event", {id: req.params.id})
 })
+app.get("/movementDes", (req, res)=>{
+  res.sendFile(path.join(__dirname, "/public/html/movementDes.html"))
+})
 app.use("/api/event", routes.events);
 app.listen(5000, ()=>{
   console.log("Hello");
